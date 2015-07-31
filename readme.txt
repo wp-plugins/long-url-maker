@@ -4,7 +4,7 @@ Donate link: https://www.kpcode.com
 Tags: url long, slug long, full url, url, slug, seo, permalink, thai url, thai, kpcode
 Requires at least: 3.0
 Tested up to: 4.2.3
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 
 เพื่อ URL ที่ยาวขึ้น และสมบูรณ์ 
@@ -101,6 +101,10 @@ This plugin working by automatic. change slug length from 200 to be 2000. on pos
 1. เปลี่ยน url ให้สามารถใช้ความยาวได้เพิ่มขึ้น อย่างสมบูรณ์แบบ
 
 == Changelog ==
+= 2.0.1 (2015-08-01) =
+
+* แก้ไขบั๊กสำหรับการอัพเดทเวอร์ชั่นปลั๊กอินจาก 1.0 เป็น 2.0
+
 = 2.0 (2015-08-01) =
 
 * เมื่อมีการอัพเดท wordpress หรือ plugin นี้จะไม่ทำการตั้งค่า url ใหม่

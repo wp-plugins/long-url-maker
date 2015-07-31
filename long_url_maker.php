@@ -4,7 +4,7 @@ Plugin Name: LONG URL MAKER
 Plugin URI: http://www.kpcode.com
 Description: Change slug maximum length from 200 to be 2000. Support all language. ปลั๊กอินนี้สามารถทำให้ตั้งชื่อ url ได้ยาวขึ้นกว่าเดิม
 Author: kpcode
-Version: 2.0
+Version: 2.0.1
 Author URI: http://www.kpcode.com
 */
 
@@ -26,6 +26,22 @@ if(($now_version != $last_version)&&($kpcode_plugin_version != '')){
 	//update last_version
 	update_option( 'kpcode_version_wp', $now_version );
 
+}
+
+/// for update from version 1.0 be version 2.0.1
+$ck_old_version = get_option( 'c_version_wp');
+if($ck_old_version!=''){
+	kpcode_cre_db_posts('new');
+	kpcode_setup_new_database();
+	kpcode_restore_db_posts();
+	
+	$wp_version = get_bloginfo( 'version' );
+	global $kpcode_longurlmaker_version;
+	$kpcode_plugin_version = get_option('kpcode_longurlmaker_version');
+	
+	add_option( 'kpcode_version_wp', $wp_version, '', 'yes' );
+	add_option( 'kpcode_longurlmaker_version', $kpcode_longurlmaker_version, '', 'yes' );
+	delete_option( 'c_version_wp' );
 }
 
 
